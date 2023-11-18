@@ -5,6 +5,8 @@ services:
     container_name: gen
     ports:
       - "5000:5000"
+    volumes:
+      - ./quote_gen:/app # mount the project directory to /app in the container
   web2:
     build: ./quote_disp
     container_name: disp
@@ -12,3 +14,5 @@ services:
       - "5001:5001"
     depends_on:
       - web1
+    volumes:
+      - ./quote_disp:/app # mount the project directory to /app in the container

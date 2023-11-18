@@ -16,7 +16,7 @@ quotes = [
 
 @app.route("/health")
 def health():
-    return "healthy"
+    return "Health check: Auto-reloading is working!"
 
 
 @app.route("/")

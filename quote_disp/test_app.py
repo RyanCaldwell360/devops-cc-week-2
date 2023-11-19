@@ -40,9 +40,7 @@ def test_home_endpoint(client):
 # Test for the get_quote endpoint
 def test_quote_endpoint(client, monkeypatch):
     class MockResponse:
-        @staticmethod
-        def text():
-            return "Mock quote"
+        text = "Mock quote"
 
     # Patching the requests.get method to return a mock response
     monkeypatch.setattr(requests, 'get', lambda url: MockResponse())

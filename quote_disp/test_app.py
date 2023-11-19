@@ -1,4 +1,5 @@
 import pytest
+import requests
 from flask import template_rendered
 from contextlib import contextmanager
 from app import app
